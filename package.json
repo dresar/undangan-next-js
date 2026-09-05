@@ -1,0 +1,46 @@
+{
+  "name": "digital-invitation-builder",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node -e \"const fs=require('fs');const path=require('path');const dirs=['.next','node_modules/.cache'];dirs.forEach(d=>{try{fs.rmSync(path.join(process.cwd(),d),{recursive:true,force:true});console.log('Cleared:',d);}catch(e){}});\" && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "init-db": "tsx scripts/init-db.ts",
+    "download-resources": "node scripts/download-resources.js"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/sortable": "^8.0.0",
+    "@dnd-kit/utilities": "^3.2.0",
+    "browser-image-compression": "^2.0.2",
+    "framer-motion": "^10.16.0",
+    "leaflet": "^1.9.4",
+    "mysql2": "^3.6.0",
+    "next": "^14.0.0",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.2.0",
+    "react-contenteditable": "^3.3.7",
+    "react-countdown": "^2.3.5",
+    "react-dom": "^18.2.0",
+    "react-easy-crop": "^5.5.6",
+    "react-icons": "^4.11.0",
+    "react-image-crop": "^11.0.10",
+    "react-leaflet": "^4.2.1",
+    "react-player": "^2.13.0",
+    "react-rnd": "^10.4.0",
+    "styled-components": "^6.1.0",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.8",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^14.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.2.0"
+  }
+}
